@@ -2,7 +2,7 @@
 interface Props {
 	title: string;
 	time: string;
-	tags: string;
+	tags: string[];
 }
 
 const { title, time, tags } = Astro.props;
@@ -28,11 +28,15 @@ const { title, time, tags } = Astro.props;
     </a>
 
     <div class="mt-4 flex flex-wrap gap-1">
-      <span
-        class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
-      >
-        {tags}
-      </span>
+      {
+        tags.map((tag) => (
+          <span
+            class="whitespace-nowrap rounded-full bg-purple-100 px-2.5 py-0.5 text-xs text-purple-600 dark:bg-purple-600 dark:text-purple-100"
+          >
+            {tag}
+          </span>
+        ))
+      }
     </div>
   </div>
 </article>
