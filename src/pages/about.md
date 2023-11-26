@@ -1,6 +1,6 @@
 ---
 title: "My First About Page in Astro"
-layout: "../layouts/mdBase.astro"
+layout: "../layouts/Base.astro"
 ---
 
 ## Hello Astro
