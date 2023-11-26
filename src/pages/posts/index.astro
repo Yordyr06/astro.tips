@@ -48,10 +48,10 @@ console.log(posts)
 			{
 				posts.map((post) => (
 					<Card
-						title={post?.frontmatter?.title}
-						time={post?.frontmatter?.pubDate}
-						tags={post?.frontmatter?.tags}
-						// slug={post?.slug}
+						title={post.data.title}
+						time={post.data.pubDate}
+						tags={post.data.tags}
+						slug={post.slug}
 					/>
 				))
 			}
